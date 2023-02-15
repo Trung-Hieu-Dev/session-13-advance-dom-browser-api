@@ -73,8 +73,8 @@ class ProjectItem {
     if (this.hasActiveTooltip) {
       return;
     }
-    const projectElement = document.getElementById(this.id);
-    const tooltipText = projectElement.dataset.extraInfo;
+    const projectElement = document.getElementById(this.id); //select DOM project element
+    const tooltipText = projectElement.dataset.extraInfo; //assign tooltip text content = DOM project element dataset
     const tooltip = new Tooltip(() => {
       this.hasActiveTooltip = false;
     }, tooltipText);
